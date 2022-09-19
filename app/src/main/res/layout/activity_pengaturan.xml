@@ -92,10 +92,10 @@
             <androidx.appcompat.widget.AppCompatButton
                 android:layout_marginTop="20dp"
                 android:id="@+id/kembali"
-                android:text="Kembali"
+                android:text="Batal"
                 android:textColor="@color/white"
                 android:textStyle="bold"
-                android:background="@drawable/button_kembali"
+                android:background="@drawable/button_batal"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"/>
 

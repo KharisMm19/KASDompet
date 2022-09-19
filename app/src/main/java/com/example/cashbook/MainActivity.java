@@ -31,28 +31,13 @@ public class MainActivity extends AppCompatActivity {
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                String user = username.getText().toString();
-//                String pass = password.getText().toString();
 //
-//                if (TextUtils.isEmpty(user) || TextUtils.isEmpty(pass)) {
-//                    Toast.makeText(MainActivity.this, "Isi Username dan Password", Toast.LENGTH_SHORT).show();
-//                }else {
-//                    Boolean checkLogin = DB.checkLogin(user, pass);
-//                    if(checkLogin == true) {
-//                        Toast.makeText(MainActivity.this, "Login Berhasil", Toast.LENGTH_SHORT).show();
-//                        Intent intent = new Intent(getApplicationContext(), HomeActivity.class);
-//                        startActivity(intent);
-//                    }else {
-//                        Toast.makeText(MainActivity.this, "Login Gagal", Toast.LENGTH_SHORT).show();
-//                    }
-//                }
-
                 String usernameLog = username.getText().toString();
                 String passwordLog = password.getText().toString();
 
                 SharedPreferences preferences = getSharedPreferences(MY_PREFS_NAME, MODE_PRIVATE);
-                String prefsUsername = preferences.getString("username", "user");
-                String prefsPassword = preferences.getString("password", "user");
+                String prefsUsername = preferences.getString("username", "kharis");
+                String prefsPassword = preferences.getString("password", "kharis");
 
                 if (usernameLog.equals(prefsUsername) && passwordLog.equals(prefsPassword)) {
                     startActivity(new Intent(MainActivity.this, HomeActivity.class));

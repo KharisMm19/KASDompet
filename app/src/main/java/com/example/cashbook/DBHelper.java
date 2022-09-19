@@ -11,10 +11,10 @@ import androidx.annotation.Nullable;
 
 public class DBHelper extends SQLiteOpenHelper {
 
-    public static final String DBNAME = "cashbook.db";
+    public static final String DBNAME = "kasdompet.db";
 
     public DBHelper(Context context) {
-        super(context, "cashbook.db", null, 1);
+        super(context, "kasdompet.db", null, 1);
     }
 
     @Override

@@ -40,7 +40,7 @@ public class Pengaturan extends AppCompatActivity implements View.OnClickListene
         kembali = findViewById(R.id.kembali);
 
         SharedPreferences preferences = getSharedPreferences(MY_PREFS_NAME, MODE_PRIVATE);
-        password = preferences.getString("password", "user");
+        password = preferences.getString("password", "kharis");
 
         simpan_password.setOnClickListener(this);
         kembali.setOnClickListener(this);
@@ -54,7 +54,7 @@ public class Pengaturan extends AppCompatActivity implements View.OnClickListene
             case R.id.simpan_password :
                 if (passwordSekarang.getText().toString().equals(password)) {
                     SharedPreferences.Editor editor = getSharedPreferences(MY_PREFS_NAME, MODE_PRIVATE).edit();
-                    editor.putString("username", "user");
+                    editor.putString("username", "kharis");
                     editor.putString("password", passwordBaru.getText().toString());
                     editor.apply();
                     Toast.makeText(getBaseContext(), "Password berhasil diubah!", Toast.LENGTH_SHORT).show();
